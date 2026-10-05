@@ -1,0 +1,59 @@
+# This repo holds code, docs, and small tables only. Nothing large.
+#
+# Rule of thumb: if a single file is over ~5 MB it does not belong here. Raw
+# sequencing goes to GEO; large intermediates and the results/ tree stay on OAK
+# and are referenced by path in the docs.
+
+# Sequencing and alignment
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.sam
+*.cram
+
+# Genomics tracks and matrices
+*.bw
+*.bigWig
+*.bedGraph
+*.mcool
+*.cool
+*.hic
+
+# Model weights and array dumps
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.safetensors
+*.pt
+*.pth
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+*.egg-info/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Cluster logs
+slurm_logs/
+slurm-*.out
+*.sbatch.log
+
+# Editor and OS cruft
+.DS_Store
+._*
+*.swp
+*~
+# Excel lock files
+~$*

@@ -1,0 +1,20 @@
+{
+	"sample_list": "config/SampleList.tsv",
+	"amplicon_info": "config/AmpliconInfo.tsv",
+	"variant_info": "config/VariantList.tsv",
+	"sortparamsdir": "sortParams/",
+	"fastqdir": "trimed_fastq",
+    "codedir": "Swap-seq/",
+    "replicate_keycols": "FlowFISHRep",    
+    "experiment_keycols": "BioRep",
+    "crispresso_min_average_read_quality": 20,
+    "crispresso_min_single_bp_quality": 0,
+    "genotyping_only": "False",
+    "reps":16,
+    "pooled": "True",
+    "ff_tss_guide_kd": 1,
+    "qpcr_tss_guide_kd": 1,
+    "guide_counts_file": "config/SC_Swap-seq_TDL_plasmid_library_PCRRep1_S1_read1.count.txt",
+    "spikein_plasmid_fraction": 0.15,
+    "exclude_replicates": "1:4,1:5"
+}

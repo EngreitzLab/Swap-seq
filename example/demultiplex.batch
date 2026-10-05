@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+#SBATCH --job-name=demultiplex
+#SBATCH --output=log/demultiplex_job.%j.out
+#SBATCH --error=log/demultiplex_job.%j.err
+#SBATCH --time=12:00:00
+#SBATCH -p engreitz
+#SBATCH -c 3
+#SBATCH --mem-per-cpu=48G
+
+PROJECT=$OAK/Projects/VariantEditing/FF/250609_Swap-seq_TDL
+BCLDIR=$OAK/Projects/SequencingRuns/swap-seq_TDL_novogene_250609/250607_lh00134_0730_A232C5LLT3
+
+
+bcl2fastq --runfolder-dir $BCLDIR --output-dir $PROJECT/fastq/ --sample-sheet $PROJECT/config/SampleSheet.csv --use-bases-mask Y*,I8N2,I8N2,Y* --no-lane-splitting --create-fastq-for-index-reads --barcode-mismatches 0

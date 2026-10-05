@@ -1,0 +1,19 @@
+# The main entry point of the workflow.
+# After configuring, running snakemake -n in a clone of this repository should successfully execute a dry-run of the workflow.
+
+
+# this container defines the underlying OS for each job when using the workflow
+# with --use-conda --use-singularity
+# container: "docker://continuumio/miniconda3"
+
+# report: "report/workflow.rst"
+include: "rules/common.smk"
+include: "rules/crispresso2.smk"
+include: "rules/bowtie2.smk"
+include: "rules/make_count_tables.smk"
+include: "rules/estimate_effect_sizes.smk"
+include: "rules/plots.smk"
+include: "rules/swapseq_effects.smk"
+
+rule all:
+    input: all_input
